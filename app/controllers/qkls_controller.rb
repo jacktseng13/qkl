@@ -28,7 +28,7 @@ class QklsController < ApplicationController
 
     respond_to do |format|
       if @qkl.save
-        format.html { redirect_to @qkl, notice: 'Qkl was successfully created.' }
+        format.html { redirect_to qkls_path, notice: 'Qkl was successfully created.' }
         format.json { render :show, status: :created, location: @qkl }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class QklsController < ApplicationController
   def update
     respond_to do |format|
       if @qkl.update(qkl_params)
-        format.html { redirect_to @qkl, notice: 'Qkl was successfully updated.' }
+        format.html { redirect_to qkls_path, notice: 'Qkl was successfully updated.' }
         format.json { render :show, status: :ok, location: @qkl }
       else
         format.html { render :edit }
