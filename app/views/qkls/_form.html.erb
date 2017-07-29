@@ -1,0 +1,27 @@
+<%= form_for(qkl) do |f| %>
+  <% if qkl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(qkl.errors.count, "error") %> prohibited this qkl from being saved:</h2>
+
+      <ul>
+      <% qkl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :xuexi %>
+    <%= f.text_field :xuexi %>
+  </div>
+
+  <div class="field">
+    <%= f.label :jianxing %>
+    <%= f.text_area :jianxing %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
